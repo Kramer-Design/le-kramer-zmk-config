@@ -4,7 +4,3 @@ include:
     keymap: corne
     cmake-args: -DZMK_SPLIT_ROLE=left
 
-  - board: nice_nano_v2
-    shield: corne_nice
-    keymap: corne
-    cmake-args: -DZMK_SPLIT_ROLE=right
