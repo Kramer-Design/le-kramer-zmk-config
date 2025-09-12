@@ -1,7 +1,7 @@
 /* corne_left.overlay */
 
 /* Disable the stock momentary-layer behavior by label */
-&momentary_layer { status = "disabled"; };
+&{/behaviors/momentary_layer} { status = "disabled"; };
 
 #include "corne.dtsi"
 
