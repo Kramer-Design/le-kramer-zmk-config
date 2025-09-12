@@ -4,4 +4,4 @@ include:
     keymap: corne
     cmake-args: >
       -DZMK_SPLIT_ROLE=left
-      -DDTC_OVERLAY_FILE=${{ github.workspace }}/config/boards/shields/corne/corne_left.overlay
+      -DDTC_OVERLAY_FILE=$GITHUB_WORKSPACE/config/boards/shields/corne/corne_left.overlay
