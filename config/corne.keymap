@@ -4,6 +4,20 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
+/* Kill the stock momentary behavior so it doesn't instantiate */
+&mo { status = "disabled"; };
+
+/* Re-add a super short momentary-layer behavior */
+ / {
+    behaviors {
+        m: m {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "M";
+            #binding-cells = <1>;
+        };
+    };
+};
+
  / {
     out_usb: out_usb { compatible = "zmk,output-usb"; };
     out_bluetooth: out_bluetooth { compatible = "zmk,output-bluetooth"; };
