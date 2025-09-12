@@ -35,13 +35,11 @@
     };
 
 
- /* --- SHORT, CUSTOM MOMENTARY BEHAVIOR --- */
     behaviors {
-        /* Short node name + short label keeps Zephyr device name under the 48-char limit */
         ml: ml {
             compatible = "zmk,behavior-momentary-layer";
             label = "ML";
-            #binding-cells = <1>;  /* one cell: target layer */
+            #binding-cells = <1>; 
         };
     };
 
