@@ -4,15 +4,11 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
-/* Kill the stock momentary behavior so it doesn't instantiate */
-&mo { status = "disabled"; };
-
-/* Re-add a super short momentary-layer behavior */
- / {
+/ {
     behaviors {
-        m: m {
+        mo: mo {
             compatible = "zmk,behavior-momentary-layer";
-            label = "M";
+            label = "M";   /* short name prevents overflow */
             #binding-cells = <1>;
         };
     };
