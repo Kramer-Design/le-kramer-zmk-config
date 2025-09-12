@@ -6,9 +6,9 @@
 
 / {
     behaviors {
-        mo: mo {
+        ml: ml {
             compatible = "zmk,behavior-momentary-layer";
-            label = "M";   /* short name prevents overflow */
+            label = "ML";       /* Short! */
             #binding-cells = <1>;
         };
     };
