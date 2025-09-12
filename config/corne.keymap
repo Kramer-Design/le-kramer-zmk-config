@@ -4,9 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
-/* Use the stock momentary behavior, but shorten its display label */
-&mo { label = "ml"; };
-
  / {
     out_usb: out_usb { compatible = "zmk,output-usb"; };
     out_bluetooth: out_bluetooth { compatible = "zmk,output-bluetooth"; };
