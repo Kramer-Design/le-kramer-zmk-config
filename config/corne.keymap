@@ -13,15 +13,9 @@
     status = "disabled";
 };
 
-/* Add a short replacement */
- / {
-    behaviors {
-        ml: ml {
-            compatible = "zmk,behavior-momentary-layer";
-            label = "ML";   /* very short name */
-            #binding-cells = <1>;
-        };
-    };
+/* Keep the stock behavior, but give it a short label */
+&mo {
+    label = "ml";
 };
 
  / {
