@@ -34,6 +34,16 @@
         zmk,output-selector = &output_select;
     };
 
+  /* --- SHORT, CUSTOM MOMENTARY BEHAVIOR --- */
+    behaviors {
+        /* Short node name + short label keeps Zephyr device name under the 48-char limit */
+        ml: ml {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "ML";
+            #binding-cells = <1>;  /* one cell: target layer */
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -42,7 +52,7 @@
         &kp ESC    &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y           &kp U        &kp I         &kp O          &kp P   
         &kp TAB    &kp A       &kp S       &kp D        &kp F        &kp G          &kp H           &kp J        &kp K         &kp L          &mt SEMI SQT
         &kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B          &kp N           &kp M        &kp COMMA     &mt MINUS DOT  &mt BSLH FSLH  
-        &mo 1      &none       &kp LCTRL   &kp LALT     &none        &kp SPACE      &mt RGUI SPACE  &none        &kp RET       &mt DEL BSPC   
+        &ml 1      &none       &kp LCTRL   &kp LALT     &none        &kp SPACE      &mt RGUI SPACE  &none        &kp RET       &mt DEL BSPC   
     >;
 };
 
@@ -57,7 +67,7 @@
    &kp ESC        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5          &kp N6          &kp N7       &kp N8         &kp N9         &kp N0   
    &kp TAB        &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT       &kp CARET       &kp SEMI     &kp PLUS       &kp UP         &mt MINUS DOT 
    &kp LSHFT      &kp TILDE    &kp GRAVE    &kp AMPS     &kp LPAR     &kp RPAR        &kp LBKT        &kp RBKT     &kp LEFT       &kp DOWN       &kp RIGHT 
-   &mo 1          &none        &mo 2        &kp LALT     &none        &kp SPACE       &mt RGUI SPACE  &none        &mt RCTRL RET  &mt DEL BSPC                               
+   &ml 1          &none        &ml 2        &kp LALT     &none        &kp SPACE       &mt RGUI SPACE  &none        &mt RCTRL RET  &mt DEL BSPC                               
                         >;
                 };
 
