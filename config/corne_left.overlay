@@ -1,5 +1,7 @@
 /* corne_left.overlay */
 
+&mo { status = "disabled"; };
+
 #include "corne.dtsi"
 
  / {
