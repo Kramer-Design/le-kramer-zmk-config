@@ -4,14 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
- /* corne_left.overlay */
-
-};
-
-/* Keep the stock behavior, but give it a short label */
-&mo {
-    label = "ml";
-};
+/* Shorten the display label for the stock momentary behavior */
+&mo { label = "ml"; };
 
  / {
     out_usb: out_usb { compatible = "zmk,output-usb"; };
