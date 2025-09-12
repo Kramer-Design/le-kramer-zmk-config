@@ -1,5 +1,8 @@
 /* corne_left.overlay */
 
+/* Kill the stock momentary-layer behavior; we'll use our short one */
+&mo { status = "disabled"; };
+
 #include "corne.dtsi"
 
  / {
