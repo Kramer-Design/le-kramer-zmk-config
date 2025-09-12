@@ -1,14 +1,12 @@
 /* corne_left.overlay */
 
-/* Kill the stock momentary-layer behavior; we'll use our short one */
-&mo { status = "disabled"; };
-
 #include "corne.dtsi"
 
  / {
      chosen { zmk,kscan = &kscan0; };
  };
 
+/* Patch scanner pins for Nice!Nano v2 */
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     diode-direction = "col2row";
