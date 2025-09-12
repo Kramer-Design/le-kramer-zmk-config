@@ -32,15 +32,7 @@
 
     chosen {
         zmk,output-selector = &output_select;
-    };
 
-
-    behaviors {
-        ml: ml {
-            compatible = "zmk,behavior-momentary-layer";
-            label = "ML";
-            #binding-cells = <1>; 
-        };
     };
 
         keymap {
