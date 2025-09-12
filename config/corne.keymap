@@ -6,11 +6,19 @@
 
 &mo { status = "disabled"; };
 
+ /* corne_left.overlay */
+
+/* Disable the stock momentary behavior */
+&mo {
+    status = "disabled";
+};
+
+/* Add a short replacement */
  / {
     behaviors {
         ml: ml {
             compatible = "zmk,behavior-momentary-layer";
-            label = "ML";    /* short label */
+            label = "ML";   /* very short name */
             #binding-cells = <1>;
         };
     };
