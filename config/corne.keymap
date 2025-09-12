@@ -34,6 +34,25 @@
         zmk,output-selector = &output_select;
     };
 
+/ {
+    /* Disable the upstream long-named instance so ours is the only one */
+    behaviors {
+        behavior_momentary_layer {
+            status = "disabled";
+        };
+
+        /* Short, custom momentary behavior (stays under 48-char limit) */
+        ml: ml {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "ML";
+            #binding-cells = <1>;
+        };
+    };
+
+    /* (rest of your / { … } from before: outputs, chosen, keymap, etc.) */
+};
+
+
   /* --- SHORT, CUSTOM MOMENTARY BEHAVIOR --- */
     behaviors {
         /* Short node name + short label keeps Zephyr device name under the 48-char limit */
