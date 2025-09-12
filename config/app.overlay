@@ -1,2 +1,1 @@
-/* shim that forces your shield overlay to load */
 #include "boards/shields/corne/corne_left.overlay"
