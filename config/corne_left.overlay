@@ -6,6 +6,16 @@
 
  / {
      chosen { zmk,kscan = &kscan0; };
+
+   /* Short, custom momentary-layer behavior */
+    behaviors {
+        ml: ml {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "ML";
+            #binding-cells = <1>;
+        };
+    };
+
  };
 
 /* Patch scanner pins for Nice!Nano v2 */
