@@ -2,17 +2,19 @@
 
 #include "corne.dtsi"
 
+/* Point the shield at our kscan node */
  / {
-    chosen { zmk,kscan = &kscan0; };
-
+    chosen {
+        zmk,kscan = &kscan0;
     };
 };
 
 /* KSCAN pin map */
 &kscan0 {
-    compatible = "zmk,kscan-gpio-matrix";
+    /* You can keep this if you want to be explicit; the shield already sets it */
     diode-direction = "col2row";
 
+    /* 4 rows */
     row-gpios = <
         &gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
         &gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
@@ -20,6 +22,7 @@
         &gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
     >;
 
+    /* columns */
     col-gpios = <
         &gpio0 31 GPIO_ACTIVE_HIGH
         &gpio0 29 GPIO_ACTIVE_HIGH
