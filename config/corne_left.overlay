@@ -1,20 +1,10 @@
 /* corne_left.overlay */
 
-/* Disable the stock momentary-layer behavior by label */
-&{/behaviors/behavior_momentary_layer} { status = "disabled"; };
-
 #include "corne.dtsi"
 
  / {
     chosen { zmk,kscan = &kscan0; };
 
-    /* Short, custom momentary-layer behavior */
-    behaviors {
-        ml: ml {
-            compatible = "zmk,behavior-momentary-layer";
-            label = "ML";
-            #binding-cells = <1>;
-        };
     };
 };
 
