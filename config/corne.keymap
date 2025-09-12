@@ -10,6 +10,22 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
+/* 1) Disable the stock momentary behavior by PATH (now valid, because behaviors.dtsi is included here) */
+&{/behaviors/momentary_layer} {
+    status = "disabled";
+};
+
+/* 2) Define a short-named replacement to keep the device name/path short */
+&{/} {
+    behaviors {
+        ml: ml {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "ML";
+            #binding-cells = <1>;
+        };
+    };
+}
+
 / {
     out_usb: out_usb {
         compatible = "zmk,output-usb";
